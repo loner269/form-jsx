@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Name from '../components/Name';
 import Email from '../components/Email';
 import Tel from '../components/Tel';
@@ -10,7 +10,7 @@ import Alert from '../components/Alert';
 import Button from '../components/Button';
 import Agree from '../components/Agree';
 
-const SignUp = () => {
+const SignUp = ({activeTab}) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -20,6 +20,19 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  
+  useEffect(() => {
+    if (activeTab === 'signup') {
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setTel('');
+      setGender('');
+      setCountry('');
+      setPassword('');
+      setIsChecked(false);
+    }
+  }, [activeTab]);
   function handleSubmit(e) {
     e.preventDefault();
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
