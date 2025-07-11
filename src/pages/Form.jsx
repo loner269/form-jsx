@@ -16,7 +16,7 @@ const Form = () => {
         <button
           onClick={() => setActiveTab('signup')}
           className={`relative z-10 w-1/2  py-2 font-semibold transition-all  ${
-            activeTab === 'signup' ? 'text-white duration-1500 scale-[105%] delay-1500' : 'text-black duration-3000 scale-[95%] font-bold'
+            activeTab === 'signup' ? 'text-white duration-1000 scale-[105%] delay-2000' : 'text-black duration-3000 scale-[95%] font-bold'
           }`}
         >
           Sign Up
@@ -24,7 +24,7 @@ const Form = () => {
         <button
           onClick={() => setActiveTab('login')}
           className={`relative z-10 w-1/2 py-2 font-semibold transition-all ${
-            activeTab === 'login' ? 'text-white duration-1500 scale-[105%] delay-1500' : 'text-black duration-3000 scale-[95%] font-bold'
+            activeTab === 'login' ? 'text-white duration-1000 scale-[105%] delay-2000' : 'text-black duration-3000 scale-[95%] font-bold'
           }`}
         >
           Login
