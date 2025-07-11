@@ -25,11 +25,14 @@ const Login = ({activeTab}) => {
         setError('');
       }, 2000);
     } else if (user) {
-      alert(`Welcome back, ${user.firstName}!`);
       setTimeout(() => {
         setEmail('');
         setPassword('');
       }, 500);
+      setTimeout(() => {
+        alert(`Welcome back, ${user.firstName}!`);
+      }, 1000);
+      
     } else {
       setError('Invalid email or password');
       setTimeout(() => {
@@ -49,7 +52,7 @@ const Login = ({activeTab}) => {
       <div className='flex justify-center mt-4'>
         <button
           type='submit'
-          className='px-6 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-900 transition duration-300'
+          className='px-6 py-2 bg-blue-800 text-white font-bold rounded-md hover:bg-blue-700 hover:scale-[110%] transition duration-300'
         >
           Login
         </button>

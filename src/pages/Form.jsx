@@ -7,24 +7,24 @@ const Form = () => {
 
   return (
     <div className='flex flex-col   z-10 justify-center w-[min(400px,90%)] p-8 rounded-lg  shadow-md backdrop-blur-sm bg-white/20'>
-      <div className='relative mb-6 p-2 bg-black/40 max-w-3/5 rounded-full flex overflow-hidden'>
+      <div className='relative mb-6 p-2 bg-black/40 max-w-3/5 overflow-hidden rounded-full flex '>
         <div
-          className={`absolute  top-2 w-1/2 bottom-2 bg-blue-950 rounded-full transition-all duration-3000 z-0 ${
+          className={`absolute  top-2 w-1/2 bottom-2 shadow-[0_0_7px_rgba(30,64,175,0.8)] bg-blue-950 rounded-full transition-all duration-3000 z-0 ${
             activeTab === 'login' ? 'translate-x-6/7' : ' translate-x-0'
           }`}
         ></div>
         <button
           onClick={() => setActiveTab('signup')}
-          className={`relative z-10 w-1/2  py-2 font-semibold transition-colors duration-3000 ${
-            activeTab === 'signup' ? 'text-white' : 'text-black font-bold'
+          className={`relative z-10 w-1/2  py-2 font-semibold transition-all  ${
+            activeTab === 'signup' ? 'text-white duration-1500 scale-[105%] delay-1500' : 'text-black duration-3000 scale-[95%] font-bold'
           }`}
         >
           Sign Up
         </button>
         <button
           onClick={() => setActiveTab('login')}
-          className={`relative z-10 w-1/2 py-2 font-semibold transition-colors duration-3000 ${
-            activeTab === 'login' ? 'text-white' : 'text-black font-bold'
+          className={`relative z-10 w-1/2 py-2 font-semibold transition-all ${
+            activeTab === 'login' ? 'text-white duration-1500 scale-[105%] delay-1500' : 'text-black duration-3000 scale-[95%] font-bold'
           }`}
         >
           Login

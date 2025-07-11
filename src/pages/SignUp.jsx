@@ -74,7 +74,6 @@ const SignUp = ({activeTab}) => {
         'users',
         JSON.stringify([...existingUsers, newUser])
       );
-      alert('Registration successful!');
       setTimeout(() => {
         setFirstName('');
         setLastName('');
@@ -85,6 +84,9 @@ const SignUp = ({activeTab}) => {
         setPassword('');
         setIsChecked(false);
       }, 500);
+      setTimeout(() => {
+        alert('Registration successful! proceed to Login');
+      }, 1000);
     }
   }
 
