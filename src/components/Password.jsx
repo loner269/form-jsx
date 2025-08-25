@@ -5,7 +5,7 @@ const Password = ({ password, setPassword }) => {
       <input
         className='w-full focus:outline-none'
         type='password'
-        placeholder='Set Password'
+        placeholder='Password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
